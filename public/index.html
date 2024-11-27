@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Ecosystem</title>
+</head>
+<body>
+    <h1>Gaming Ecosystem</h1>
+
+    <h2>Mint a new asset</h2>
+    <button onclick="createAsset()">Mint Game Asset</button>
+
+    <h2>Transfer asset</h2>
+    <label>From Address: <input type="text" id="fromAddress" /></label><br>
+    <label>To Address: <input type="text" id="toAddress" /></label><br>
+    <label>Token ID: <input type="text" id="tokenId" /></label><br>
+    <button onclick="transferAsset()">Transfer Asset</button>
+
+    <script>
+        async function createAsset() {
+            const response = await fetch('http://localhost:3000/createAsset', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+            alert(data.message);
+        }
+
+        async function transferAsset() {
+            const from = document.getElementById('fromAddress').value;
+            const to = document.getElementById('toAddress').value;
+            const tokenId = document.getElementById('tokenId').value;
+
+            const response = await fetch('http://localhost:3000/transferAsset', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ from, to, tokenId })
+            });
+
+            const data = await response.json();
+            alert(data.message);
+        }
+    </script>
+</body>
+</html>
