@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\Victor\\Desktop\\Blockchain_FP\\blockchain-gaming_5\\game-assets\\contracts\\GameAssets.sol": {
+      "lastModificationDate": 1732929265049,
+      "contentHash": "91d27ea0186cb55df2d82d244f221257",
+      "sourceName": "contracts/GameAssets.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "GameAssets"
+      ]
+    }
+  }
+}
