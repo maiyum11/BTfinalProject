@@ -20,7 +20,14 @@ This Project aims to provide a demo of how Blockchain technologies can be used i
    - npm install react react-dom
    - npm install dotenv
 
-2. 2. Prepare Smart Contract and Deploy in the "game-assets" Directory:
-- npx hardhat clear (to clear previous compiler)
-- npx hardhat node (to start hardhat node for the local network)
-- npx hardhat run scripts/deploy.js --network localhost (to deploy the smart contract using a script)
+2. Prepare Smart Contract and Deploy in the "game-assets" Directory:
+   - npx hardhat clear (to clear previous compiler)
+   - npx hardhat node (to start hardhat node for the local network)
+   - npx hardhat run scripts/deploy.js --network localhost (to deploy the smart contract using a script)
+  
+3. Start NodeJS:
+   - npm start
+
+
+
+
